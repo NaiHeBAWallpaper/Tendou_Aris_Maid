@@ -44,7 +44,8 @@ const subtitleLocales = {
 	Chinese: 'zh-Hans',
 	TraditionalChinese: 'zh-Hant',
 	Japanese: 'ja',
-	Korean: 'ko'
+	Korean: 'ko',
+	Thai: 'th'
 };
 let isVoicelinePlaying = false;
 
@@ -59,50 +60,52 @@ const AUDIO_DETAIL = [
 		audio: ["CH0200_MemorialLobby_1_1.ogg","CH0200_MemorialLobby_1_2.ogg"],
 		dialog: {
 			Japanese: [
-				"せ、先生！？",
-				"アリス、まだ準備中なので……"
+				"せ、先生！？アリス、まだ準備中なので……",
+				"せ、先生！？アリス、まだ準備中なので……"
 			],
 			English: [
-				"S-Sensei?! ",
-				"I am still preparing..."
+				"S-Sensei?! I am still preparing...",
+				"S-Sensei?! I am still preparing..."
 			],
 			Chinese: [
-				"老，老师？！",
-				"爱丽丝， 还没准备好呢……"
+				"老，老师？！爱丽丝，还没准备好呢……",
+				"老，老师？！爱丽丝，还没准备好呢……"
 			],
 			TraditionalChinese: [
-				"老，老師？！",
-				"愛麗絲， 還沒準備好呢……"
+				"老，老師！？愛麗絲，還在準備中……",
+				"老，老師！？愛麗絲，還在準備中……"
 			],
 			Korean: [
-				"S-선생님?!",
-				"아직 준비중이야"
-			]
+				"선, 선생님!? 아리스, 아직 준비 중이라서……",
+				"선, 선생님!? 아리스, 아직 준비 중이라서……"
+			],
+			Thai: ["คะ... คุณครู!? อาริสึยังเตรียมตัว อยู่เลย...","คะ... คุณครู!? อาริสึยังเตรียมตัว อยู่เลย..."]
 		}
 	},
 	{
 		audio: ["CH0200_MemorialLobby_2_1.ogg","CH0200_MemorialLobby_2_2.ogg"],
 		dialog: {
 			Japanese: [
-				"メイドを克服し、ジョブチェンジしたアリスの姿…… 先生に見せようと思ったのですが……",
-				"アリスの支度が整うまで、 もう少しだけ待っていてください。"
+				"メイドを克服し、ジョブチェンジしたアリスの姿……先生に見せようと思ったのですが……",
+				"アリスの支度が整うまで、もう少しだけ待っていてください。"
 			],
 			English: [
-				"The day will come when I have mastery over being a maid, and reach the highest level in my class.",
-				"That is the side of me that I want to show you.So, please wait until then."
+				"I wanted to show you that I had overcome my fears and successfully changed my class to a maid... That is the side of me that I want to show you.",
+				"So, please wait until I am ready."
 			],
 			Chinese: [
-				"本来想让老师看看…… 克服了女仆身份，转职后的爱丽丝的样子……",
-				"在爱丽丝准备好之前， 请您再稍等一会儿。"
+				"本来想让老师看看……克服了女仆身份，转职后的爱丽丝的样子……",
+				"在爱丽丝准备好之前，请您再稍等一会儿。"
 			],
 			TraditionalChinese: [
-				"克服了女僕，轉職後的愛麗絲的模樣……",
+				"克服了女僕，轉職後的愛麗絲的模樣……雖然想讓老師看……",
 				"在愛麗絲的準備完成之前，請再稍等一下。"
 			],
 			Korean: [
-				"메이드를 극복하고, 전직한 아리스의 모습……",
+				"메이드를 극복하고, 전직한 아리스의 모습…… 선생님께 보여드리려고 생각했는데……",
 				"아리스가 준비를 끝낼 때까지, 조금만 기다려 주세요."
-			]
+			],
+			Thai: ["อาริสึคิดว่าจะให้คุณครูได้เห็น อาริสึที่ก้าวข้ามชุดเมด แล้วเปลี่ยนคลาส มาได้แล้วน่ะค่ะ...","คุณครูช่วยรออีกนิด จนกว่าอาริสึจะเตรียมตัวเสร็จ ได้มั้ยคะ"]
 		}
 	},
 	{
@@ -117,7 +120,7 @@ const AUDIO_DETAIL = [
 				"I could achieve this only because you were here for me, Sensei."
 			],
 			Chinese: [
-				"没错！女仆已经 没有什么好怕的了！",
+				"没错！女仆已经没有什么好怕的了！",
 				"这都是多亏了老师的帮忙。"
 			],
 			TraditionalChinese: [
@@ -127,7 +130,8 @@ const AUDIO_DETAIL = [
 			Korean: [
 				"맞아요! 이제 메이드는 무섭지 않아요!",
 				"이건 전부 선생님이 계셔 주었기 때문입니다."
-			]
+			],
+			Thai: ["ใช่แล้วค่ะ! ตอนนี้อาริสึไม่กลัวเมดแล้วค่ะ!","ทั้งหมดนี้เป็นเพราะ คุณครูอยู่ข้างๆ กันไงคะ"]
 		}
 	},
 	{
@@ -138,7 +142,7 @@ const AUDIO_DETAIL = [
 				"アリスはどんなダンジョンでも攻略できますから。"
 			],
 			English: [
-				"If I can do it in a party with you...",
+				"If I'm with you...",
 				"Then I can take on any dungeon in the world."
 			],
 			Chinese: [
@@ -152,7 +156,8 @@ const AUDIO_DETAIL = [
 			Korean: [
 				"선생님과 함께라면……",
 				"아리스는 어떤 던전이든 공략할 수 있으니까요."
-			]
+			],
+			Thai: ["เพราะถ้าอยู่กับคุณครู...","ไม่ว่าจะดันเจี้ยนแบบไหน อาริสึก็ฝ่าฟันได้ค่ะ!"]
 		}
 	},
 	{
@@ -165,14 +170,15 @@ const AUDIO_DETAIL = [
 				"Yes! I am ready for a new adventure!"
 			],
 			Chinese: [
-				"是！爱丽丝， 冒险准备完毕！"
+				"是！爱丽丝，冒险准备完毕！"
 			],
 			TraditionalChinese: [
 				"好！愛麗絲，做好冒險的準備了！"
 			],
 			Korean: [
 				"네! 아리스, 모험 준비가 끝났어요!"
-			]
+			],
+			Thai: ["ค่ะ! อาริสึพร้อม ออกผจญภัยแล้วค่ะ!"]
 		}
 	}
 ];
@@ -284,7 +290,7 @@ function playVoiceline() {
 			track.play().catch(finish);
 
 			if (dialogBox) {
-				textbox.textContent = dialog[window.selectedLanguage][index];
+				textbox.textContent = getSubtitleText(dialog, window.selectedLanguage, index);
 				textbox.style.opacity = 1;
 			}
 		},
@@ -459,6 +465,16 @@ function setMouse(event) {
 	return { x: ax - canvas.width * positionX, y: ay - canvas.height * positionY };
 }
 
+function getSubtitleText(dialog, language, index) {
+	let text = dialog?.[language]?.[index];
+	if (text == null && language === 'Thai') {
+		language = 'English';
+		text = dialog?.[language]?.[index];
+	}
+	textbox.lang = subtitleLocales[language];
+	return text ?? "";
+}
+
 function updateSubtitleLanguage() {
 	let language = subtitleLanguagePreference;
 	if (language === 'auto') {
@@ -472,6 +488,8 @@ function updateSubtitleLanguage() {
 			language = 'Japanese';
 		} else if (primary === 'ko' || primary === 'korean' || primary === 'koreana') {
 			language = 'Korean';
+		} else if (primary === 'th' || primary === 'thai') {
+			language = 'Thai';
 		} else {
 			language = 'English';
 		}
@@ -481,7 +499,7 @@ function updateSubtitleLanguage() {
 	window.selectedLanguage = language;
 	textbox.lang = subtitleLocales[language];
 	const clip = currentTracks.at(-1);
-	if (dialogBox && clip) textbox.textContent = clip.dialog[language][clip.index];
+	if (dialogBox && clip) textbox.textContent = getSubtitleText(clip.dialog, language, clip.index);
 }
 
 function init() {
